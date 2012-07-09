@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3F106919-B29B-474C-89B5-212812448E86}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XlsOp</RootNamespace>
+    <AssemblyName>XlsOp</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationInitializer.cs" />
+    <Compile Include="Excel\COM\Application.cs" />
+    <Compile Include="Excel\COM\WorkbookImpl.cs" />
+    <Compile Include="Excel\COM\WorkbooksImpl.cs" />
+    <Compile Include="Excel\IApplication.cs" />
+    <Compile Include="Excel\IWorkbook.cs" />
+    <Compile Include="Excel\IWorkbooks.cs" />
+    <Compile Include="IComObject.cs" />
+    <Compile Include="Office\COM\ColorFormatImpl.cs" />
+    <Compile Include="Office\COM\GradientStopImpl.cs" />
+    <Compile Include="Office\COM\GradientStopsImpl.cs" />
+    <Compile Include="Office\IColorFormat.cs" />
+    <Compile Include="Office\IGradientStop.cs" />
+    <Compile Include="Office\IGradientStops.cs" />
+    <Compile Include="Office\TriState.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ComObjectWrapper.cs" />
+    <Compile Include="VBIDE\ComponentType.cs" />
+    <Compile Include="VBIDE\COM\CodeModuleImpl.cs" />
+    <Compile Include="VBIDE\COM\VBComponentImpl.cs" />
+    <Compile Include="VBIDE\COM\VBComponentsImpl.cs" />
+    <Compile Include="VBIDE\COM\VBProjectImpl.cs" />
+    <Compile Include="VBIDE\ICodeModule.cs" />
+    <Compile Include="VBIDE\IVBComponent.cs" />
+    <Compile Include="VBIDE\IVBComponents.cs" />
+    <Compile Include="VBIDE\IVBProject.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
